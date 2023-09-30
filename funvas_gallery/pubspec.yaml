@@ -1,0 +1,26 @@
+name: funvas_gallery
+description: >2-
+  Gallery application for the funvas package, allowing to explore some animations.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.14.0-0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  funvas:
+    path: ../funvas
+  funvas_tweets:
+    path: ../funvas_tweets
+
+  url_launcher: ^6.0.20
+  url_strategy: ^0.2.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true

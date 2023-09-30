@@ -1,0 +1,44 @@
+name: gallery
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'funvas_gallery/lib/**'
+      - 'funvas_gallery/web/**'
+      - 'funvas_gallery/pubspec.yaml'
+      - 'funvas_tweets/lib/**'
+      - '.github/workflows/hosting.yml'
+
+jobs:
+  deploy:
+    timeout-minutes: 6
+    runs-on: ubuntu-latest
+    name: deployment
+
+    steps:
+      - uses: actions/checkout@v2.3.5
+        with:
+          persist-credentials: false
+      - uses: subosito/flutter-action@v2.4.0
+        with:
+          channel: 'stable'
+
+      - name: Build gallery web app
+        run: |
+          cd funvas_gallery
+          flutter pub get
+          flutter build web
+          cd build/web
+          touch ".nojekyll"
+          echo "funvas.creativemaybeno.dev" > CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: funvas_gallery/build/web
+          git-config-name: creativecreatorormaybenot
+          git-config-email: creativecreatorormaybenot@gmail.com
+          commit-message: Deploy funvas gallery app

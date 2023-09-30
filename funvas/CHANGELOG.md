@@ -1,3 +1,73 @@
+## 0.1.8
+
+* Updated to accomodate latest framework changes.
+
+## 0.1.7
+
+* Exposed `FunvasPainter`.
+* Bumped minimum SDK version.
+
+## 0.1.6+6
+
+* Fixed images in README.
+
+## 0.1.6+5
+
+* Fixed `muted` state.
+
+## 0.1.6+4
+
+* Fixed `paused` and diagnostics property.
+
+## 0.1.6+3
+
+* Added diagnostics property for `paused`.
+
+## 0.1.6+2
+
+* Fixed `paused` value not being respected on init.
+
+## 0.1.6+1
+
+* Improved documentation for container pausing behavior.
+
+## 0.1.6
+
+* Improved container pausing behavior by muting the active ticker.
+
+## 0.1.5
+
+* Added ability to pause a `FunvasContainer`.
+
+## 0.1.4+1
+
+* Mentioned community projects in README.
+
+## 0.1.4
+
+* Added the member `s` to `Funvas`, which is a shortcut for the available size
+  (that is also available through `x.width` and `x.height`).
+
+## 0.1.3+5
+
+* Updated example app to use `flutter_lints`.
+
+## 0.1.3+4
+
+* Fixed homepage URL.
+
+## 0.1.3+3
+
+* Updated README to reflect new gallery naming.
+
+## 0.1.3+2
+
+* Switched to `flutter_lints`.
+
+## 0.1.3+1
+
+* Added new GIFs to README.
+
 ## 0.1.3
 
 * Upgraded to latest dependencies.

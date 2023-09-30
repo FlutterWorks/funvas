@@ -9,10 +9,16 @@ The name "funvas" is based on Flutter + fun + canvas. Let me know if you have an
 The idea of the package is to provide an easy way to create custom canvas animations based only
 on time and some math functions (sine, cosine, etc.) - like [this one][Twitter].
 
-<a target="_blank" href="https://twitter.com/creativemaybeno/status/1328261273922973696?s=20"><img src="https://s8.gifyu.com/images/animation8709ccbbf7b20e6e.gif" width="49%"></a>
-<a target="_blank" href="https://twitter.com/creativemaybeno/status/1327309901270560769?s=20"><img src="https://s8.gifyu.com/images/animation8709ccbbf7b20e6f.gif" width="49%"></a>
-<a target="_blank" href="https://twitter.com/creativemaybeno/status/1346101868079042561?s=20"><img src="https://s2.gifyu.com/images/animation053c9f614aad68ef.gif" width="49%"></a>
-<a target="_blank" href="https://twitter.com/creativemaybeno/status/1349343188247404548?s=20"><img src="https://s2.gifyu.com/images/animationbfc096a486621405.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1328261273922973696?s=20"><img src="https://user-images.githubusercontent.com/19204050/143094392-7be15fd8-dd09-40a0-a9b2-137b3605e0e5.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1327309901270560769?s=20"><img src="https://user-images.githubusercontent.com/19204050/143094636-1c60aa9d-03bf-4f3a-896e-d645bf55fb1b.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1377705763402039303?s=20"><img src="https://user-images.githubusercontent.com/19204050/113479453-b9dd2480-947e-11eb-88b6-4ef3835e0a29.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1360867891906830336?s=20"><img src="https://user-images.githubusercontent.com/19204050/113479456-bfd30580-947e-11eb-9a3a-f807299a289a.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1346101868079042561?s=20"><img src="https://user-images.githubusercontent.com/19204050/143095262-3bc4678c-e68d-4120-b4b0-c362fcf36fb2.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1349343188247404548?s=20"><img src="https://user-images.githubusercontent.com/19204050/143095301-cee78b4a-7c23-41a7-afe4-51b483ff8716.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1369749942080839680?s=20"><img src="https://user-images.githubusercontent.com/19204050/113479483-e8f39600-947e-11eb-858b-ec3fe980f2b2.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1370328227479191553?s=20"><img src="https://user-images.githubusercontent.com/19204050/113479485-ec871d00-947e-11eb-863b-4dac2a92c6e4.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1350085831550148611?s=20"><img src="https://user-images.githubusercontent.com/19204050/113479488-f01aa400-947e-11eb-81c4-e4394ec20b01.gif" width="49%"></a>
+<a target="_blank" href="https://twitter.com/creativemaybeno/status/1364560611435307008?s=20"><img src="https://user-images.githubusercontent.com/19204050/113479491-f1e46780-947e-11eb-9bb2-f43748651700.gif" width="49%"></a>
 
 *Inspired by Dwitter* ([check it out][Dwitter]). This is also the reason why
 the following shortcut functions and variables are available; they might be expanded upon in the
@@ -73,16 +79,24 @@ class ExampleFunvasWidget extends StatelessWidget {
 
 See the [example package][example] for a complete example implementation.
 
-## Demo & more
+## Gallery & more
 
-Funvas is a package that I wrote because I wanted to create some Dwitter-like animations in Flutter myself.
-Because of that, I have created a lot surrounding it, which you might not discover when looking only at the package :)
+Funvas is a package that I wrote because I wanted to create some Dwitter-like animations in Flutter
+myself.
+Because of that, I have created a lot surrounding it, which you might not discover when looking only
+at the package :)  
+And not only me - the community has also created some amazing projects with it ✨
 
-To see a live demo and many fun(vas) animations, you can see the [main README on GitHub][repo] :)
+In the [main README on GitHub][repo] you can find:
+
+* [Gallery][gallery] - live demo showcasing some of my funvas animations.
+* [Community projects][community] - list of projects created by the community using the `funvas` package.
 
 [Twitter]: https://twitter.com/creativemaybeno/status/1285343758247178240?s=20
 [Dwitter]: https://www.dwitter.net/about
-[example]: https://github.com/creativecreatorormaybenot/funvas/tree/master/example
+[example]: https://github.com/creativecreatorormaybenot/funvas/tree/main/funvas/example
 [repo]: https://github.com/creativecreatorormaybenot/funvas
+[gallery]: https://github.com/creativecreatorormaybenot/funvas#user-content-gallery-
+[community]: https://github.com/creativecreatorormaybenot/funvasuser-content-community-projects
 [SizedBox]: https://api.flutter.dev/flutter/widgets/SizedBox-class.html
 [FunvasContainer]: https://pub.dev/documentation/funvas/latest/funvas/FunvasContainer-class.html

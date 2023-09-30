@@ -4,7 +4,7 @@ version: 0.0.1
 publish_to: 'none'
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.14.0-0 <3.0.0'
   flutter: '>=1.17.0'
 
 dependencies:
@@ -14,15 +14,15 @@ dependencies:
   funvas:
     path: ../funvas
 
+  google_fonts: ^6.1.0
+  open_simplex_2:
+    path: ../open_simplex_2
+
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-  golden_toolkit: ^0.9.0
-
-  pedantic: ^1.11.0
+  flutter_lints: ^2.0.0
 
 flutter:
-  assets:
-    # See https://github.com/eBay/flutter_glove_box/issues/31.
-    - assets/0.stub
+  uses-material-design: true
+
+  shaders:
+    - shaders/50.frag

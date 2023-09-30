@@ -1,8 +1,7 @@
 import 'dart:math';
-import 'dart:ui';
 
 import 'package:flutter/animation.dart';
-import 'package:flutter/rendering.dart';
+import 'package:flutter/painting.dart';
 import 'package:funvas/funvas.dart';
 import 'package:funvas_tweets/funvas_tweets.dart';
 
@@ -38,7 +37,7 @@ class Twelve extends Funvas with FunvasTweetMixin {
         c.save();
         c.rotate(pi / 2 * i + spin);
         c.drawRect(
-          Offset.zero & Size(sideLength, sideLength),
+          Offset.zero & const Size(sideLength, sideLength),
           Paint()
             ..color = color
             ..style = PaintingStyle.stroke

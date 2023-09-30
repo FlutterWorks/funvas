@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:funvas/src/painter.dart';
@@ -17,14 +18,37 @@ class FunvasContainer extends StatefulWidget {
   /// timer on the state will reset, restarting [Funvas.u] at `0` seconds.
   const FunvasContainer({
     Key? key,
+    this.paused = false,
     required this.funvas,
   }) : super(key: key);
+
+  /// Whether the [funvas] animation should be paused or not.
+  ///
+  /// This is implemented using [Ticker.muted], which means that pausing the
+  /// container will stop the animation from being redrawn. However, the time
+  /// in the ticker will still elapse. This means that disabling [paused] again
+  /// will cause the animation to jump to the point it would have been at if it
+  /// had never been paused.
+  ///
+  /// To display a funvas animation that never ticks, i.e. displays only a
+  /// single frame without any side effects, one should instead use a
+  /// [CustomPaint] with a [FunvasPainter] that is passed a static time instead.
+  ///
+  /// Defaults to false.
+  final bool paused;
 
   /// The [Funvas] that can draw in the container.
   final Funvas funvas;
 
   @override
-  _FunvasContainerState createState() => _FunvasContainerState();
+  State<FunvasContainer> createState() => _FunvasContainerState();
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+
+    properties.add(FlagProperty('paused', value: paused));
+  }
 }
 
 class _FunvasContainerState extends State<FunvasContainer>
@@ -37,7 +61,11 @@ class _FunvasContainerState extends State<FunvasContainer>
     super.initState();
 
     _time = ValueNotifier(0);
-    _ticker = createTicker(_update)..start();
+    _ticker = createTicker(_update);
+
+    if (!widget.paused) {
+      _ticker.start();
+    }
   }
 
   @override
@@ -49,6 +77,14 @@ class _FunvasContainerState extends State<FunvasContainer>
       _ticker
         ..stop()
         ..start();
+    }
+
+    if (!widget.paused && oldWidget.paused && !_ticker.isActive) {
+      _ticker
+        ..muted = false
+        ..start();
+    } else {
+      _ticker.muted = widget.paused;
     }
   }
 
